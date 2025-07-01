@@ -24,9 +24,36 @@ To facilitate testing and ensure reproducibility, please follow the steps below:
    When testing different datasets (`Dataset-1` and `Dataset-2`), make sure to copy the internal folders named `train_big`, `val_big` and `test_external` into `Files02`, so that the classifier can access them using the correct directory structure.
 
 3. **Ensure consistent global parameters**  
-   Before running `Runme1_train.m` and `Runme2_postClassEval.m` in sequence, verify that the following global parameters are set to the same values in both scripts:  
+   Before running `Runme1_train.m`, `Runme2_postClassEval.m` and `Runme3_test` in sequence, verify that the following global parameters are set to the same values in both scripts:  
    `Dim`, `kkk`, `nSAMP`, and `numPoints`.  
    Maintaining consistency ensures a fair evaluation of the model performance on the corresponding dataset.
+
+4. **Suggested Parameter Settings**
+   Suggested parameter configurations for testing each dataset are listed below:
+	•	Dataset-1
+Dim = 4.
+KKK = 10.
+nSAMP = 1000.
+numPoints = 1000.
+numEpochs = 40.
+learnRate = 0.00012.
+l2Regularization = 0.3.
+learnRateDropPeriod = 20.
+learnRateDropFactor = 0.1.
+gradientDecayFactor = 0.7.
+squaredGradientDecayFactor = 0.999.
+	•	Dataset-2
+Dim = 3.
+KKK = 10.
+nSAMP = 100.
+numPoints = 100.
+numEpochs = 15.
+learnRate = 0.0002.
+l2Regularization = 0.2.
+learnRateDropPeriod = 5.
+learnRateDropFactor = 0.5.
+gradientDecayFactor = 0.8.
+squaredGradientDecayFactor = 0.999.
 
 For detailed instructions, refer to the script headers and in-line comments.
 
