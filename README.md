@@ -21,7 +21,7 @@ To facilitate testing and ensure reproducibility, please follow the steps below:
    Open **MATLAB R2024a** (or later).
    - The folder `Files01` contains scripts for converting 3D chemical field data into point cloud files (`.ply` format).
    - The folder `Files02` contains the classification scripts based on PointNet++.
-   When testing different datasets (`Dataset-1` and `Dataset-2`), make sure to copy the internal folders named `test_big` and `train_big` into `Files02`, so that the classifier can access them using the correct directory structure.
+   When testing different datasets (`Dataset-1` and `Dataset-2`), make sure to copy the internal folders named `train_big`, `val_big` and `test_external` into `Files02`, so that the classifier can access them using the correct directory structure.
 
 3. **Ensure consistent global parameters**  
    Before running `Runme1_train.m` and `Runme2_postClassEval.m` in sequence, verify that the following global parameters are set to the same values in both scripts:  
