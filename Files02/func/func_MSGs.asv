@@ -1,0 +1,22 @@
+function [Pnet3]=func_MSGs(PNet2,P0);
+
+ 
+Pnet3 = PNet2;
+p     = 2;
+for i = 1:size(PNet2,1)
+    if mod(i,100)==1
+       disp('pointNet++ training MSG'); 
+    end
+    %检测采样密度
+    dist0   = mean((PNet2(i,:)-P0).^2,4);
+    dist1   = sum(dist0,3);
+    dist2   = extractdata(sum(dist1,2));
+    [V,I]   = sort(dist2);
+ 
+    dmin      = V(2);
+    imin      = I(2);
+    %特征提取与聚合
+    Pnet3(i,:)= PNet2(i,:)+PNet2(imin,:)*dmin^p;
+end
+
+
