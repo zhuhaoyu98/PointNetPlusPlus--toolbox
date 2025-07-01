@@ -30,7 +30,7 @@ To facilitate testing and ensure reproducibility, please follow the steps below:
 
 4. **Suggested Parameter Settings**  
    Suggested parameter configurations for testing each dataset are listed below:  
-   `Dataset-1`  
+   - `Dataset-1`  
     Dim = 4.  
     KKK = 10.  
     nSAMP = 1000.  
@@ -42,7 +42,7 @@ To facilitate testing and ensure reproducibility, please follow the steps below:
     learnRateDropFactor = 0.1.  
     gradientDecayFactor = 0.7.  
     squaredGradientDecayFactor = 0.999.  
-   `Dataset-2`   
+   - `Dataset-2`   
     Dim = 3.  
     KKK = 10.  
     nSAMP = 100.  
